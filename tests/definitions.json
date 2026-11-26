@@ -1,0 +1,1493 @@
+[
+  {
+    "model": "AG-100",
+    "class": "AG100",
+    "address": 1,
+    "values": [
+      "silver",
+      "electrode_signal",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 0A C5 CD",
+        "response": "01 03 14 00 00 41 20 33 33 42 C8 00 00 00 00 00 00 00 00 E3 E8 41 C7 43 0C",
+        "expect": {
+          "silver": 10,
+          "electrode_signal": 100.1,
+          "temperature": 24.986282
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 1E 00 02 68 0D"
+      },
+      {
+        "method": "calibrate",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          8
+        ],
+        "request": "01 06 00 43 00 08 79 D8"
+      },
+      {
+        "method": "calibration_status",
+        "read": true,
+        "sets_address": false,
+        "args": [],
+        "request": "01 03 00 43 00 01 75 DE",
+        "response": "01 03 02 00 00 B8 44",
+        "expect": 0
+      },
+      {
+        "method": "clear_calibration",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 43 7F FF 18 6E"
+      }
+    ]
+  },
+  {
+    "model": "CA-100",
+    "class": "CA100",
+    "address": 1,
+    "values": [
+      "calcium",
+      "electrode_signal",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 0A C5 CD",
+        "response": "01 03 14 00 00 41 20 33 33 42 C8 00 00 00 00 00 00 00 00 E3 E8 41 C7 43 0C",
+        "expect": {
+          "calcium": 10,
+          "electrode_signal": 100.1,
+          "temperature": 24.986282
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 1E 00 02 68 0D"
+      },
+      {
+        "method": "calibrate",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          8
+        ],
+        "request": "01 06 00 43 00 08 79 D8"
+      },
+      {
+        "method": "calibration_status",
+        "read": true,
+        "sets_address": false,
+        "args": [],
+        "request": "01 03 00 43 00 01 75 DE",
+        "response": "01 03 02 00 00 B8 44",
+        "expect": 0
+      },
+      {
+        "method": "clear_calibration",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 43 7F FF 18 6E"
+      }
+    ]
+  },
+  {
+    "model": "CHL-100",
+    "class": "CHL100",
+    "address": 1,
+    "values": [
+      "chlorophyll",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 26 00 00 04 4F 41",
+        "response": "01 03 08 3F 03 DE 41 71 EB C3 3F B0 DA",
+        "expect": {
+          "chlorophyll": 1.53,
+          "temperature": 27.8
+        },
+        "tolerance": 0.06
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          10
+        ],
+        "request": "01 10 30 00 00 01 02 0A 00 90 F3"
+      },
+      {
+        "method": "start_brush",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 10 31 00 00 01 02 00 00 86 93"
+      }
+    ]
+  },
+  {
+    "model": "CL-100",
+    "class": "CL100",
+    "address": 1,
+    "values": [
+      "chloride",
+      "electrode_signal",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 0A C5 CD",
+        "response": "01 03 14 00 00 41 20 33 33 42 C8 00 00 00 00 00 00 00 00 E3 E8 41 C7 43 0C",
+        "expect": {
+          "chloride": 10,
+          "electrode_signal": 100.1,
+          "temperature": 24.986282
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 1E 00 02 68 0D"
+      },
+      {
+        "method": "calibrate",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          8
+        ],
+        "request": "01 06 00 43 00 08 79 D8"
+      },
+      {
+        "method": "calibration_status",
+        "read": true,
+        "sets_address": false,
+        "args": [],
+        "request": "01 03 00 43 00 01 75 DE",
+        "response": "01 03 02 00 00 B8 44",
+        "expect": 0
+      },
+      {
+        "method": "clear_calibration",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 43 7F FF 18 6E"
+      }
+    ]
+  },
+  {
+    "model": "CLO2-100",
+    "class": "CLO2100",
+    "address": 1,
+    "values": [
+      "chlorine_dioxide",
+      "electrode_signal",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 0A C5 CD",
+        "response": "01 03 14 E7 2F 41 1F DA 2A 41 1F DA 2A 41 9F 00 00 00 00 75 26 41 C7 5E CC",
+        "expect": {
+          "chlorine_dioxide": 9.993941,
+          "electrode_signal": 19.981525,
+          "temperature": 24.932201
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 1E 00 02 68 0D"
+      }
+    ]
+  },
+  {
+    "model": "CO2-100",
+    "class": "CO2100",
+    "address": 1,
+    "values": [
+      "carbon_dioxide",
+      "electrode_signal",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 0A C5 CD",
+        "response": "01 03 14 00 00 41 20 33 33 42 C8 00 00 00 00 00 00 00 00 E3 E8 41 C7 43 0C",
+        "expect": {
+          "carbon_dioxide": 10,
+          "electrode_signal": 100.1,
+          "temperature": 24.986282
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 1E 00 02 68 0D"
+      },
+      {
+        "method": "calibrate",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          8
+        ],
+        "request": "01 06 00 43 00 08 79 D8"
+      },
+      {
+        "method": "calibration_status",
+        "read": true,
+        "sets_address": false,
+        "args": [],
+        "request": "01 03 00 43 00 01 75 DE",
+        "response": "01 03 02 00 00 B8 44",
+        "expect": 0
+      },
+      {
+        "method": "clear_calibration",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 43 7F FF 18 6E"
+      }
+    ]
+  },
+  {
+    "model": "CU-100",
+    "class": "CU100",
+    "address": 1,
+    "values": [
+      "copper",
+      "electrode_signal",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 0A C5 CD",
+        "response": "01 03 14 00 00 41 20 33 33 42 C8 00 00 00 00 00 00 00 00 E3 E8 41 C7 43 0C",
+        "expect": {
+          "copper": 10,
+          "electrode_signal": 100.1,
+          "temperature": 24.986282
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 1E 00 02 68 0D"
+      },
+      {
+        "method": "calibrate",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          8
+        ],
+        "request": "01 06 00 43 00 08 79 D8"
+      },
+      {
+        "method": "calibration_status",
+        "read": true,
+        "sets_address": false,
+        "args": [],
+        "request": "01 03 00 43 00 01 75 DE",
+        "response": "01 03 02 00 00 B8 44",
+        "expect": 0
+      },
+      {
+        "method": "clear_calibration",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 43 7F FF 18 6E"
+      }
+    ]
+  },
+  {
+    "model": "DO-100",
+    "class": "DO100",
+    "address": 1,
+    "values": [
+      "dissolved_oxygen",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 04 44 09",
+        "response": "01 03 08 03 64 00 02 08 CC 00 02 CA 5A",
+        "expect": {
+          "dissolved_oxygen": 8.68,
+          "temperature": 22.52
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          25
+        ],
+        "request": "01 06 20 02 00 19 E2 00"
+      },
+      {
+        "method": "calibrate_zero",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 10 00 00 00 8D 0A"
+      },
+      {
+        "method": "calibrate_slope",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 10 04 00 00 CC CB"
+      }
+    ]
+  },
+  {
+    "model": "DO-110",
+    "class": "DO110",
+    "address": 1,
+    "values": [
+      "dissolved_oxygen",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 04 44 09",
+        "response": "01 03 08 48 E1 0A 41 F6 28 B4 41 59 5A",
+        "expect": {
+          "dissolved_oxygen": 8.68,
+          "temperature": 22.52
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          20
+        ],
+        "request": "01 10 00 10 00 01 02 14 00 AB C0"
+      }
+    ]
+  },
+  {
+    "model": "DO-130",
+    "class": "DO130",
+    "address": 1,
+    "values": [
+      "dissolved_oxygen",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 04 44 09",
+        "response": "01 03 08 48 E1 0A 41 F6 28 B4 41 59 5A",
+        "expect": {
+          "dissolved_oxygen": 8.68,
+          "temperature": 22.52
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 10 00 10 00 01 02 02 00 A5 A0"
+      },
+      {
+        "method": "start_brush",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "03 06 00 13 00 00 79 ED"
+      },
+      {
+        "method": "set_brush_interval",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          180
+        ],
+        "request": "03 06 00 14 00 B4 C8 5B"
+      },
+      {
+        "method": "set_salinity",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          10
+        ],
+        "request": "01 10 00 62 00 01 02 0A 00 A8 B2"
+      }
+    ]
+  },
+  {
+    "model": "EC-100",
+    "class": "EC100",
+    "address": 1,
+    "values": [
+      "conductivity",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 02 C4 0B",
+        "response": "01 03 04 02 AE 01 64 9A 11",
+        "expect": {
+          "conductivity": 686,
+          "temperature": 35.6
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 50 00 02 08 1A"
+      }
+    ]
+  },
+  {
+    "model": "EC-110",
+    "class": "EC110",
+    "address": 1,
+    "values": [
+      "conductivity",
+      "temperature",
+      "tds",
+      "salinity"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 04 44 09",
+        "response": "01 03 08 00 1A 00 BF 00 0D 00 02 2B CF",
+        "expect": {
+          "conductivity": 260,
+          "temperature": 19.1,
+          "tds": 130,
+          "salinity": 0.2
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 00 00 02 08 0B"
+      }
+    ]
+  },
+  {
+    "model": "EC-120",
+    "class": "EC120",
+    "address": 1,
+    "values": [
+      "conductivity",
+      "resistivity",
+      "temperature",
+      "tds",
+      "salinity"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 0A C5 CD",
+        "response": "01 03 14 08 12 3E A2 7E 0F 45 45 A2 B1 41 DD 3B E2 43 1E 0E AC 43 2E F8 F6",
+        "expect": {
+          "conductivity": 0.316,
+          "resistivity": 3159.9,
+          "temperature": 27.7,
+          "tds": 158.2,
+          "salinity": 174.1
+        },
+        "tolerance": 0.06
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 14 00 02 48 0F"
+      }
+    ]
+  },
+  {
+    "model": "F-100",
+    "class": "F100",
+    "address": 1,
+    "values": [
+      "fluoride",
+      "electrode_signal",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 0A C5 CD",
+        "response": "01 03 14 00 00 41 20 33 33 42 C8 00 00 00 00 00 00 00 00 E3 E8 41 C7 43 0C",
+        "expect": {
+          "fluoride": 10,
+          "electrode_signal": 100.1,
+          "temperature": 24.986282
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 1E 00 02 68 0D"
+      },
+      {
+        "method": "calibrate",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          8
+        ],
+        "request": "01 06 00 43 00 08 79 D8"
+      },
+      {
+        "method": "calibration_status",
+        "read": true,
+        "sets_address": false,
+        "args": [],
+        "request": "01 03 00 43 00 01 75 DE",
+        "response": "01 03 02 00 00 B8 44",
+        "expect": 0
+      },
+      {
+        "method": "clear_calibration",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 43 7F FF 18 6E"
+      }
+    ]
+  },
+  {
+    "model": "GF-201-CH4",
+    "class": "GF201CH4",
+    "address": 1,
+    "values": [
+      "combustible_gas"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 01 84 0A",
+        "response": "01 03 02 00 7D 78 65",
+        "expect": {
+          "combustible_gas": 12.5
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": []
+  },
+  {
+    "model": "GF-201-CO2",
+    "class": "GF201CO2",
+    "address": 1,
+    "values": [
+      "carbon_dioxide"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 01 84 0A",
+        "response": "01 03 02 04 B0 BB 30",
+        "expect": {
+          "carbon_dioxide": 1200
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": []
+  },
+  {
+    "model": "GF-201-NH3",
+    "class": "GF201NH3",
+    "address": 1,
+    "values": [
+      "ammonia"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 01 84 0A",
+        "response": "01 03 02 00 FD 79 C5",
+        "expect": {
+          "ammonia": 25.3
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": []
+  },
+  {
+    "model": "GF-201-O2",
+    "class": "GF201O2",
+    "address": 1,
+    "values": [
+      "oxygen"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 01 84 0A",
+        "response": "01 03 02 08 2A 3E 5B",
+        "expect": {
+          "oxygen": 20.9
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": []
+  },
+  {
+    "model": "GF-201",
+    "class": "GF201",
+    "address": 1,
+    "values": [
+      "hydrogen_sulfide"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 01 84 0A",
+        "response": "01 03 02 00 20 B9 9C",
+        "expect": {
+          "hydrogen_sulfide": 32
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": []
+  },
+  {
+    "model": "K-100",
+    "class": "K100",
+    "address": 1,
+    "values": [
+      "potassium",
+      "electrode_signal",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 0A C5 CD",
+        "response": "01 03 14 00 00 41 20 33 33 42 C8 00 00 00 00 00 00 00 00 E3 E8 41 C7 43 0C",
+        "expect": {
+          "potassium": 10,
+          "electrode_signal": 100.1,
+          "temperature": 24.986282
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 1E 00 02 68 0D"
+      },
+      {
+        "method": "calibrate",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          8
+        ],
+        "request": "01 06 00 43 00 08 79 D8"
+      },
+      {
+        "method": "calibration_status",
+        "read": true,
+        "sets_address": false,
+        "args": [],
+        "request": "01 03 00 43 00 01 75 DE",
+        "response": "01 03 02 00 00 B8 44",
+        "expect": 0
+      },
+      {
+        "method": "clear_calibration",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 43 7F FF 18 6E"
+      }
+    ]
+  },
+  {
+    "model": "NH3-100",
+    "class": "NH3100",
+    "address": 1,
+    "values": [
+      "ammonia",
+      "electrode_signal",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 0A C5 CD",
+        "response": "01 03 14 00 00 41 20 33 33 42 C8 00 00 00 00 00 00 00 00 E3 E8 41 C7 43 0C",
+        "expect": {
+          "ammonia": 10,
+          "electrode_signal": 100.1,
+          "temperature": 24.986282
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 1E 00 02 68 0D"
+      },
+      {
+        "method": "calibrate",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          8
+        ],
+        "request": "01 06 00 43 00 08 79 D8"
+      },
+      {
+        "method": "calibration_status",
+        "read": true,
+        "sets_address": false,
+        "args": [],
+        "request": "01 03 00 43 00 01 75 DE",
+        "response": "01 03 02 00 00 B8 44",
+        "expect": 0
+      },
+      {
+        "method": "clear_calibration",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 43 7F FF 18 6E"
+      }
+    ]
+  },
+  {
+    "model": "NH4-100",
+    "class": "NH4100",
+    "address": 1,
+    "values": [
+      "ammonium",
+      "electrode_signal",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 0A C5 CD",
+        "response": "01 03 14 00 00 41 20 33 33 42 C8 00 00 00 00 00 00 00 00 E3 E8 41 C7 43 0C",
+        "expect": {
+          "ammonium": 10,
+          "electrode_signal": 100.1,
+          "temperature": 24.986282
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 1E 00 02 68 0D"
+      },
+      {
+        "method": "calibrate",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          8
+        ],
+        "request": "01 06 00 43 00 08 79 D8"
+      },
+      {
+        "method": "calibration_status",
+        "read": true,
+        "sets_address": false,
+        "args": [],
+        "request": "01 03 00 43 00 01 75 DE",
+        "response": "01 03 02 00 00 B8 44",
+        "expect": 0
+      },
+      {
+        "method": "clear_calibration",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 43 7F FF 18 6E"
+      }
+    ]
+  },
+  {
+    "model": "NO2-100",
+    "class": "NO2100",
+    "address": 1,
+    "values": [
+      "nitrite",
+      "electrode_signal",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 0A C5 CD",
+        "response": "01 03 14 00 00 41 20 33 33 42 C8 00 00 00 00 00 00 00 00 E3 E8 41 C7 43 0C",
+        "expect": {
+          "nitrite": 10,
+          "electrode_signal": 100.1,
+          "temperature": 24.986282
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 1E 00 02 68 0D"
+      },
+      {
+        "method": "calibrate",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          8
+        ],
+        "request": "01 06 00 43 00 08 79 D8"
+      },
+      {
+        "method": "calibration_status",
+        "read": true,
+        "sets_address": false,
+        "args": [],
+        "request": "01 03 00 43 00 01 75 DE",
+        "response": "01 03 02 00 00 B8 44",
+        "expect": 0
+      },
+      {
+        "method": "clear_calibration",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 43 7F FF 18 6E"
+      }
+    ]
+  },
+  {
+    "model": "NO3-100",
+    "class": "NO3100",
+    "address": 1,
+    "values": [
+      "nitrate",
+      "electrode_signal",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 0A C5 CD",
+        "response": "01 03 14 00 00 41 20 33 33 42 C8 00 00 00 00 00 00 00 00 E3 E8 41 C7 43 0C",
+        "expect": {
+          "nitrate": 10,
+          "electrode_signal": 100.1,
+          "temperature": 24.986282
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 1E 00 02 68 0D"
+      },
+      {
+        "method": "calibrate",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          8
+        ],
+        "request": "01 06 00 43 00 08 79 D8"
+      },
+      {
+        "method": "calibration_status",
+        "read": true,
+        "sets_address": false,
+        "args": [],
+        "request": "01 03 00 43 00 01 75 DE",
+        "response": "01 03 02 00 00 B8 44",
+        "expect": 0
+      },
+      {
+        "method": "clear_calibration",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 43 7F FF 18 6E"
+      }
+    ]
+  },
+  {
+    "model": "O2-100",
+    "class": "O2100",
+    "address": 1,
+    "values": [
+      "oxygen"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 01 84 0A",
+        "response": "01 03 02 00 D1 78 18",
+        "expect": {
+          "oxygen": 20.9
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 00 00 02 08 0B"
+      }
+    ]
+  },
+  {
+    "model": "O3-100",
+    "class": "O3100",
+    "address": 1,
+    "values": [
+      "ozone",
+      "electrode_signal",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 0A C5 CD",
+        "response": "01 03 14 E7 2F 41 1F DA 2A 41 1F DA 2A 41 9F 00 00 00 00 75 26 41 C7 5E CC",
+        "expect": {
+          "ozone": 9.993941,
+          "electrode_signal": 19.981525,
+          "temperature": 24.932201
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 1E 00 02 68 0D"
+      },
+      {
+        "method": "calibrate_slope",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          5
+        ],
+        "request": "01 06 00 43 01 F4 78 09"
+      },
+      {
+        "method": "calibrate_zero",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 43 00 01 B9 DE"
+      },
+      {
+        "method": "calibration_status",
+        "read": true,
+        "sets_address": false,
+        "args": [],
+        "request": "01 03 00 43 00 01 75 DE",
+        "response": "01 03 02 00 00 B8 44",
+        "expect": 0
+      },
+      {
+        "method": "clear_calibration",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 43 7F FF 18 6E"
+      }
+    ]
+  },
+  {
+    "model": "ORP-100",
+    "class": "ORP100",
+    "address": 1,
+    "values": [
+      "orp"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 01 84 0A",
+        "response": "01 03 02 02 AE 38 98",
+        "expect": {
+          "orp": 686
+        },
+        "tolerance": 0.006
+      },
+      {
+        "request": "01 03 00 00 00 01 84 0A",
+        "response": "01 03 02 FF 9C F9 DD",
+        "expect": {
+          "orp": -100
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 50 00 02 08 1A"
+      },
+      {
+        "method": "set_offset",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          -20
+        ],
+        "request": "01 06 00 0A FF EC E9 B5"
+      }
+    ]
+  },
+  {
+    "model": "PB-100",
+    "class": "PB100",
+    "address": 1,
+    "values": [
+      "lead",
+      "electrode_signal",
+      "temperature"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 0A C5 CD",
+        "response": "01 03 14 00 00 41 20 33 33 42 C8 00 00 00 00 00 00 00 00 E3 E8 41 C7 43 0C",
+        "expect": {
+          "lead": 10,
+          "electrode_signal": 100.1,
+          "temperature": 24.986282
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 1E 00 02 68 0D"
+      },
+      {
+        "method": "calibrate",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          8
+        ],
+        "request": "01 06 00 43 00 08 79 D8"
+      },
+      {
+        "method": "calibration_status",
+        "read": true,
+        "sets_address": false,
+        "args": [],
+        "request": "01 03 00 43 00 01 75 DE",
+        "response": "01 03 02 00 00 B8 44",
+        "expect": 0
+      },
+      {
+        "method": "clear_calibration",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 43 7F FF 18 6E"
+      }
+    ]
+  },
+  {
+    "model": "PH-100",
+    "class": "PH100",
+    "address": 1,
+    "values": [
+      "ph"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 01 84 0A",
+        "response": "01 03 02 02 AE 38 98",
+        "expect": {
+          "ph": 6.86
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 50 00 02 08 1A"
+      },
+      {
+        "method": "calibrate918",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 5A 00 0A 29 DE"
+      },
+      {
+        "method": "calibrate686",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 5B 00 0B B9 DE"
+      },
+      {
+        "method": "calibrate400",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 5C 00 0C 49 DD"
+      }
+    ]
+  },
+  {
+    "model": "PH-110",
+    "class": "PH110",
+    "address": 1,
+    "values": [
+      "ph"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 01 84 0A",
+        "response": "01 03 02 02 AE 38 98",
+        "expect": {
+          "ph": 6.86
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 50 00 02 08 1A"
+      },
+      {
+        "method": "calibrate918",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 5A 00 0A 29 DE"
+      },
+      {
+        "method": "calibrate686",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 5B 00 0B B9 DE"
+      },
+      {
+        "method": "calibrate400",
+        "read": false,
+        "sets_address": false,
+        "args": [],
+        "request": "01 06 00 5C 00 0C 49 DD"
+      }
+    ]
+  },
+  {
+    "model": "THS-100",
+    "class": "THS100",
+    "address": 1,
+    "values": [
+      "temperature",
+      "humidity"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 02 C4 0B",
+        "response": "01 03 04 01 E6 FF 9F 1B A0",
+        "expect": {
+          "temperature": -9.7,
+          "humidity": 48.6
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 01 00 00 02 09 F7"
+      },
+      {
+        "method": "set_temperature_offset",
+        "read": false,
+        "sets_address": false,
+        "args": [
+          -0.5
+        ],
+        "request": "01 06 01 04 FF FB C9 84"
+      }
+    ]
+  },
+  {
+    "model": "TUR-100",
+    "class": "TUR100",
+    "address": 1,
+    "values": [
+      "turbidity"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 01 84 0A",
+        "response": "01 03 02 1A 0A 33 23",
+        "expect": {
+          "turbidity": 666.6
+        },
+        "tolerance": 0.01
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 50 00 02 08 1A"
+      }
+    ]
+  },
+  {
+    "model": "TVOC-100",
+    "class": "TVOC100",
+    "address": 1,
+    "values": [
+      "tvoc",
+      "co2_equivalent"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 03 00 02 34 0B",
+        "response": "01 03 04 00 7D 02 62 EA A2",
+        "expect": {
+          "tvoc": 125,
+          "co2_equivalent": 610
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": [
+      {
+        "method": "change_address",
+        "read": false,
+        "sets_address": true,
+        "args": [
+          2
+        ],
+        "request": "01 06 00 64 00 02 49 D4"
+      }
+    ]
+  },
+  {
+    "model": "ULM-100",
+    "class": "ULM100",
+    "address": 1,
+    "values": [
+      "level"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 01 84 0A",
+        "response": "01 03 02 00 10 B9 88",
+        "expect": {
+          "level": 16
+        },
+        "tolerance": 0.006
+      },
+      {
+        "request": "01 03 00 00 00 01 84 0A",
+        "response": "01 03 02 80 10 D8 48",
+        "expect": {
+          "level": -16
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": []
+  },
+  {
+    "model": "ULM-110",
+    "class": "ULM110",
+    "address": 1,
+    "values": [
+      "level"
+    ],
+    "frames": [
+      {
+        "request": "01 03 00 00 00 01 84 0A",
+        "response": "01 03 02 00 10 B9 88",
+        "expect": {
+          "level": 16
+        },
+        "tolerance": 0.006
+      },
+      {
+        "request": "01 03 00 00 00 01 84 0A",
+        "response": "01 03 02 80 10 D8 48",
+        "expect": {
+          "level": -16
+        },
+        "tolerance": 0.006
+      }
+    ],
+    "commands": []
+  }
+]

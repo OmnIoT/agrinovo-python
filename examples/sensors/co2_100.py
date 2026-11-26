@@ -1,0 +1,36 @@
+"""Agrinovo CO2-100 dissolved carbon dioxide probe.
+
+Prints dissolved CO2, electrode signal and temperature every 5 seconds.
+
+Sensor cable
+  Red     supply +, 9-27 V DC
+  Black   supply ground
+  Yellow  RS485 A
+  White   RS485 B
+
+The computer talks to the sensor through a USB to RS485 adapter: A to A,
+B to B. Run this file with the adapter's port, for example:
+
+    python co2_100.py /dev/ttyUSB0
+
+https://agrinovo.io/products/sensors/aqua/ion-selective/co2-100-probe/
+"""
+
+import sys
+import time
+
+import agrinovo
+
+PORT = sys.argv[1] if len(sys.argv) > 1 else "/dev/ttyUSB0"
+
+with agrinovo.Bus(PORT, baudrate=9600) as bus:
+    probe = agrinovo.CO2100(bus)  # Modbus address 1
+    while True:
+        try:
+            reading = probe.read()
+            print(f"Dissolved CO2: {reading.carbon_dioxide:.2f} ppm")
+            print(f"Electrode signal: {reading.electrode_signal:.1f} mV")
+            print(f"Temperature: {reading.temperature:.1f} °C")
+        except agrinovo.AgrinovoError as error:
+            print(error)
+        time.sleep(5)
