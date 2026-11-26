@@ -61,7 +61,7 @@ A sensor that is not in the table yet can be read with `agrinovo.GenericSensor` 
 ## Install
 
 ```
-pip install agrinovo
+pip install git+https://github.com/OmnIoT/agrinovo-python
 ```
 
 Python 3.9 or newer. The only dependency is [pyserial](https://pypi.org/project/pyserial/).
